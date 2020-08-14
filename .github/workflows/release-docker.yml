@@ -1,0 +1,22 @@
+name: Release Vanaland Docker Image
+
+on:
+  push:
+    tags:
+      - "v*"
+      - canary
+      - docker
+
+jobs:
+  build_docker_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: vanaland/vanaland
+          tag_with_ref: true
+          push: ${{ startsWith(github.ref, 'refs/tags/') }}

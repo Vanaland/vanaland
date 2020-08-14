@@ -1,0 +1,22 @@
+{
+  "name": "vanaland",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Vanaland/vanaland.git",
+  "author": "Vanaland God <god@vanaland.site>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron dist/main.bundle.js",
+    "start:linux": "docker run -it --rm -p 9358:9358 vanaland:vanaland bash",
+    "release:win": "electron-builder build --win --x64 -p never",
+    "release:mac": "electron-builder build --mac --x64  -p never",
+    "release:linux": "docker build -t vanaland:vanaland .",
+    "pack": "node scripts/pack.js"
+  },
+  "devDependencies": {
+    "compressing": "^1.5.1",
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "electronDownload": {
+    "mirror": "https://cdn.npm.taobao.org/dist/electron/"
+  },
+  "artifactName": "vanaland.${ext}",
+  "appId": "im.vanaland",
+  "productName": "Vanaland",
+  "directories": {
+    "app": "./dist",
+    "output": "./out/"
+  },
+  "win": {
+    "target": "nsis",
+    "asar": true
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": false
+  },
+  "buildVersion": "0.0.2"
+}
