@@ -2,6 +2,8 @@ name: Release Vanaland
 
 on:
   push:
+    branches:
+      - master
     tags:
       - "v*"
       - canary

@@ -2,10 +2,11 @@ name: Release Vanaland Docker Image
 
 on:
   push:
+    branches:
+      - master
     tags:
       - "v*"
       - canary
-      - docker
 
 jobs:
   build_docker_version:
