@@ -2,11 +2,8 @@ name: Release Vanaland
 
 on:
   push:
-    branches:
-      - master
     tags:
       - "v*"
-      - canary
 
 jobs:
   build_on_mac:
