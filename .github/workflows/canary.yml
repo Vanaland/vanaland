@@ -1,4 +1,4 @@
-name: Release Vanaland
+name: Release Vanaland Canary
 
 on:
   push:

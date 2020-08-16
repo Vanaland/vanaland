@@ -1,4 +1,4 @@
-name: Release Vanaland Docker Image
+name: Release Vanaland Canary Docker Image
 
 on:
   push:
